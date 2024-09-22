@@ -3,6 +3,8 @@
 gradeCount = int(input("How many grades do you have? "))
 gradeArr = []
 gradeTotal = 0
+highGrade = 0
+lowGrade = 100
 
 for grade in range(0,gradeCount,1):
     inputGrade = float(input("Please enter your grade: "))
@@ -14,3 +16,10 @@ print("Your average is: ", gradeAverage,"%")
 print("grades: ")
 for grade in gradeArr:
     print(grade, "%")
+for grade in gradeArr:
+    if (grade > highGrade):
+        highGrade = grade
+    if(grade < lowGrade):
+        lowGrade = grade
+print("Highest grade: ", highGrade)
+print("Lowest grade: ", lowGrade)
