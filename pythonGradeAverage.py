@@ -2,7 +2,7 @@
 
 gradeCount = int(input("How many grades do you have? "))
 gradeArr = []
-highToLow = []
+swap = 0
 newHigh = 0
 gradeTotal = 0
 highGrade = 0
@@ -33,15 +33,13 @@ for grade in gradeArr:
 print("Highest grade: ", highGrade)
 print("Lowest grade: ", lowGrade)
 
-for i in range(0, len(gradeArr), 1):
-    if (j < len(gradeArr)):
-        j = i + 1
-    if gradeArr[j] > gradeArr[i]:
-        newHigh = gradeArr[j]
-        highToLow.append(newHigh)
-        # gradeArr.pop(j)
-        # newHigh = 0
-        print(highToLow)
+for i in range(0, gradeCount - 1, 1):
+    for i in range(0, gradeCount - 1, 1):
+        if gradeArr[i] < gradeArr[i + 1]:
+            swap = gradeArr[i]
+            gradeArr[i] = gradeArr[i + 1]
+            gradeArr[i + 1] = swap
+print(gradeArr)
 
 
 
