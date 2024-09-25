@@ -11,7 +11,7 @@ while(gradesCount >= 1):
 
 
 while(gradesCount < numberOfGrades):
-    print(gradesArr[gradesCount]"%")
+    print(gradesArr[gradesCount], "%")
     gradesCount = gradesCount + 1
 
 
